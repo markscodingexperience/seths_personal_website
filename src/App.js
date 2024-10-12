@@ -4,6 +4,7 @@ import Nav from './component/Nav';
 import Gallery from './component/Gallery';
 import About from './component/About';
 import Contact from './component/Contact';
+import '@fontsource/poppins';
 
 function App() {
   return (

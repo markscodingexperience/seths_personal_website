@@ -27,7 +27,7 @@ const Nav = () => {
       return (
         <nav className="top-0 h-16 inset-x-0 z-30 my-10 mx-5 lg:mx-36">
             <div className="container mx-auto h-full w-full flex items-center justify-between md:py-10">
-                <h4 className="text-3xl font-normal md:text-4xl tracking-wide">Seth Ayao</h4>
+                <h4 className="text-3xl font-bold font-baskerville md:text-4xl tracking-wide">Seth Ayao</h4>
                 <div className='hidden md:flex'>
                   <ul className='flex space-x-5'>
                       <motion.li 
@@ -39,7 +39,7 @@ const Nav = () => {
                         }}
                         whileTap={{scale: 0.9, color: "rgb(47 135 254)"}}
                         >
-                          <Link to="/">Gallery</Link>
+                          <Link to="/" className='font-poppins'>Gallery</Link>
                           <motion.span
                             variants={{
                               line: { x: 0, width: "100%", opacity: 1 },
@@ -50,25 +50,23 @@ const Nav = () => {
                       </motion.li>
 
                       <motion.li 
-                        onHoverStart={() => toggleAboutHoverLine()} 
+                        onHoverStart={() => toggleAboutHoverLine()}
                         onHoverEnd={() => toggleAboutHoverLine()} 
-                        animate={aboutHoverLine ? "lines" : "unlines"}
+                        animate={aboutHoverLine ? "line" : "unline"}
                         whileHover={{
                           scale: 1.1, color: "#4f46e5"
                         }}
                         whileTap={{scale: 0.9, color: "rgb(47 135 254)"}}
                         >
-                          <Link to="/about">About</Link>
+                          <Link to="/about" className='font-poppins'>About</Link>
                           <motion.span
-                            initial="lines"
                             variants={{
-                              lines: { x: 0, width: "100%", opacity: 1 },
-                              unlines: { x: 0, width: 0, opacity: 1 }
+                              line: { x: 0, width: "100%", opacity: 1 },
+                              unline: { x: 1, width: 0, opacity: 0 }
                             }} 
-                            transition={{ type: "tween", duration: 0.5, flip: true }}
+                            transition={{ type: "tween", duration: .5 }}
                             className="w-full h-px block bg-gray-500"></motion.span>
                       </motion.li>
-
 
                       <motion.li 
                         onHoverStart={() => toggleContactHoverLine()} 
@@ -79,7 +77,7 @@ const Nav = () => {
                         }}
                         whileTap={{scale: 0.9, color: "rgb(47 135 254)"}}
                         >
-                          <Link to="/contact">Contact</Link>
+                          <Link to="/contact" className='font-poppins'>Contact</Link>
                           <motion.span
                             variants={{
                               line: { x: 0, width: "100%", opacity: 1 },
@@ -177,7 +175,7 @@ const Nav = () => {
                           animate="open"
                           transition={{ type: "spring", bounce: 0.5 }}
                           >
-                          <Link to={button.link} onClick={() => toggleMobileNav()} className='text-3xl '>{button.name}</Link>
+                          <Link to={button.link} onClick={() => toggleMobileNav()} className='text-3xl font-poppins'>{button.name}</Link>
                         </motion.li>
                       )}
                     </ul>

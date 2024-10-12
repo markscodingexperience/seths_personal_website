@@ -1,0 +1,26 @@
+.custom-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 65px;
+  height: 2px;
+  background-color: rgb(46, 63, 207);
+}
+
+.custom-shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1068px) {
+  .custom-spacing {
+    padding: 0 0.5rem;
+  }
+
+  .custom-font-size {
+    font-size: 25px;
+  }
+}
+
+/* @media screen and (min-width: ) {
+} */

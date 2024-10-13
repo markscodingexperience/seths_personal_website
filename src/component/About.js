@@ -9,7 +9,6 @@ const About = () => {
         scale: 1,
         transition: {
           type: "spring",
-          bounce: 0.023,
         },
       }}
       exit={{ y: "-100%", opacity: 0 }}
@@ -57,11 +56,13 @@ const About = () => {
           <p className="text-lg mb-4">
             Growing up, I found many hobbies including{" "}
             <span className="text-blue-700">drawing sketches</span> and music. I
-            also love taking photograph of scenery while traveling and writing{" "}
+            also love taking <span className="text-rose-700">photograph</span>{" "}
+            of scenery while traveling and writing{" "}
             <span className="text-purple-700">poems </span> which I find useful
             in making catchy phrases or when I need some scenic backgrounds for
-            a poster art. Luckily, there are plenty of tools that I can use as
-            venue to express my creative side and share it to the world.
+            a <span className="text-teal-800">poster art</span>. Luckily, there
+            are plenty of tools that I can use as venue to express my creative
+            side and share it to the world.
           </p>
         </div>
       </div>

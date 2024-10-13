@@ -94,7 +94,7 @@ const Gallery = () => {
             <img
               src={image.image}
               alt={image.name}
-              className="object-cover w-full h-90 cursor-pointer"
+              className="object-cover w-full h-90 cursor-pointer "
               loading="lazy"
               onClick={() => handleClick(image.image)}
             />

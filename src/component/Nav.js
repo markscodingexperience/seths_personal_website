@@ -1,11 +1,8 @@
-import {
-  motion,
-  useCycle,
-  AnimatePresence,
-  MotionConfig,
-  easeIn,
-} from "framer-motion";
+import { motion, useCycle, AnimatePresence, MotionConfig } from "framer-motion";
 import { Link } from "react-router-dom";
+import InstaIcon from "../assets/icons/instagram.svg";
+import MessengerIcon from "../assets/icons/messenger.svg";
+import TwitterIcon from "../assets/icons/twitter.svg";
 
 const Nav = () => {
   const [mobileNav, toggleMobileNav] = useCycle(false, true);
@@ -237,15 +234,25 @@ const Nav = () => {
                 }}
               >
                 <ul className="flex items-center gap-x-5 justify-center">
-                  <li>
-                    <div className="w-10 h-10 bg-gray-100 rounded-lg"></div>
-                  </li>
-                  <li>
-                    <div className="w-10 h-10 bg-gray-100 rounded-lg"></div>
-                  </li>
-                  <li>
-                    <div className="w-10 h-10 bg-gray-100 rounded-lg"></div>
-                  </li>
+                  {[
+                    {
+                      icon: MessengerIcon,
+                      link: "https://www.facebook.com/Seth.Iris.009",
+                    },
+                    {
+                      icon: InstaIcon,
+                      link: "https://www.instagram.com/sesudesu009/",
+                    },
+                    { icon: TwitterIcon, link: "https://x.com/sesudesu009" },
+                  ].map((icon) => (
+                    <li>
+                      <div className="w-10 h-10">
+                        <a href={icon.link}>
+                          <img src={icon.icon} alt="" />
+                        </a>
+                      </div>
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
             </motion.div>

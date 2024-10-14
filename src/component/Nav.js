@@ -1,5 +1,5 @@
 import { motion, useCycle, AnimatePresence, MotionConfig } from "framer-motion";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import InstaIcon from "../assets/icons/instagram.svg";
 import MessengerIcon from "../assets/icons/messenger.svg";
 import TwitterIcon from "../assets/icons/twitter.svg";
@@ -43,9 +43,16 @@ const Nav = () => {
               }}
               whileTap={{ scale: 0.9, color: "rgb(47 135 254)" }}
             >
-              <Link to="/" className="font-poppins">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-poppins underline underline-offset-8 decoration-indigo-500"
+                    : "font-poppins"
+                }
+              >
                 Gallery
-              </Link>
+              </NavLink>
               <motion.span
                 variants={{
                   line: { x: 0, width: "100%", opacity: 1 },
@@ -66,9 +73,16 @@ const Nav = () => {
               }}
               whileTap={{ scale: 0.9, color: "rgb(47 135 254)" }}
             >
-              <Link to="/about" className="font-poppins">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-poppins underline underline-offset-8 decoration-indigo-500"
+                    : "font-poppins"
+                }
+              >
                 About
-              </Link>
+              </NavLink>
               <motion.span
                 variants={{
                   line: { x: 0, width: "100%", opacity: 1 },
@@ -89,9 +103,16 @@ const Nav = () => {
               }}
               whileTap={{ scale: 0.9, color: "rgb(47 135 254)" }}
             >
-              <Link to="/contact" className="font-poppins">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-poppins underline underline-offset-8 decoration-indigo-500"
+                    : "font-poppins"
+                }
+              >
                 Contact
-              </Link>
+              </NavLink>
               <motion.span
                 variants={{
                   line: { x: 0, width: "100%", opacity: 1 },

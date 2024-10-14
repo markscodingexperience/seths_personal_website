@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0 }}
+      initial={{ y: 50, scale: 1.5 }}
       animate={{
-        opacity: 1,
+        y: 0,
         scale: 1,
         transition: {
+          duration: 1,
           type: "spring",
+          bounce: 0.25,
         },
       }}
       exit={{ y: "-100%", opacity: 0 }}
